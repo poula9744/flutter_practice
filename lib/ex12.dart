@@ -23,11 +23,14 @@ class Ex12 extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(4),
+              margin: EdgeInsets.all(10),
               padding: EdgeInsets.all(10),
-
               width: 440,
-              color: Color(0xffffffff),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color(0xffffffff),
+              ),
+
               child: Column(
                 children: [
                   ClipRRect(
@@ -82,7 +85,10 @@ class Ex12 extends StatelessWidget {
               padding: EdgeInsets.all(10),
 
               width: 440,
-              color: Color(0xffffffff),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color(0xffffffff),
+              ),
               child: Row(
                 children: [
                   Column(
@@ -109,7 +115,10 @@ class Ex12 extends StatelessWidget {
               padding: EdgeInsets.all(10),
 
               width: 440,
-              color: Color(0xffffffff),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color(0xffffffff),
+              ),
               child: Row(
                 children: [
                   Column(
@@ -137,6 +146,9 @@ class Ex12 extends StatelessWidget {
               height: 60,
               child: OutlinedButton
                 (onPressed: (){},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Color(0xff8d8d8d)),
+                  ),
                 child: Text("기록", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xff000000)))),
             ),
             Container(
@@ -145,8 +157,11 @@ class Ex12 extends StatelessWidget {
               height: 60,
               child: OutlinedButton
                 (onPressed: (){},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Color(0xff8d8d8d)),
+                  ),
                   child: Text("저장위치", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xff000000)))),
-            )
+            ),
           ],
         ),
       )
